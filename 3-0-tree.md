@@ -48,8 +48,12 @@ Most commonly, trees are binary search trees, meaning that the value on the left
 
 - Hello
 
-## Try it out!
+## Example
 
 [Tree Example](3-1-example.py)
 
+## Practice
+
 [Tree Practice](3-2-practice.py)
+
+[Tree Solution](3-3-solution.py)

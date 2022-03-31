@@ -32,8 +32,22 @@ Let's visualize this by imagining a line of people waiting to check out at a gro
 * This is an O(1) function as well. 
 * In Python, this is done by checking if the length of the list is 0. ```len(list) == 0```
 
-## Try it out!
+## Example
 
 [Queue Example](1-1-example.py)
 
+```py
+
+```
+
+Output
+
+```
+
+```
+
+## Practice
+
 [Queue Practice](1-2-practice.py)
+
+[Queue Solution](1-3-solution.py)
