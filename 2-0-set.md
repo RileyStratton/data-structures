@@ -55,6 +55,10 @@ set_start_time = time.time()
 if 999999 in my_set: pass
 set_elapsed_time = time.time() - set_start_time
 
+
+
+# Test code
+
 print("List elapsed time: " + str(list_elapsed_time))
 print("Set elapsed time: " + str(set_elapsed_time))
 ```
@@ -69,6 +73,10 @@ Set elapsed time:  0.000000715255737304
 The set finds the item in the list 10,000 times faster.
 
 ## Practice
+
+### Union of Two Lists
+
+Using the unique elements of a set, please create a set that contains all the elements of both lists, without any duplicates.
 
 [Set Practice](2-2-practice.py)
 

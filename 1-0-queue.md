@@ -34,19 +34,77 @@ Let's visualize this by imagining a line of people waiting to check out at a gro
 
 ## Example
 
-[Queue Example](1-1-example.py)
+If you want to run this code you may visit the [Queue Example](1-1-example.py). Otherwise, it will be demonstrated here.
 
 ```py
+class CustomerService:
 
+    class Ticket:
+
+        def __init__(self, name, problem):
+
+            self.name = name
+            self.problem = problem
+
+        def __str__(self):
+
+            return self.name + ": " + self.problem
+
+    def __init__(self):
+
+        self.queue = list()
+
+    def create_ticket(self, name, problem):
+
+        ticket = CustomerService.Ticket(name, problem)
+        self.queue.append(ticket)
+
+    def process_ticet(self):
+
+        if len(self.queue) > 0:
+            print(self.queue.pop(0))
+        else:
+            print ("There are no tickets to process")
+
+    def __str__(self):
+
+        result = "["
+        for ticket in self.queue:
+            result += "{"+str(ticket)+"}"
+            result += ", "
+        result += "]"
+        return result
+
+
+
+# Test code
+
+customer_service = CustomerService()
+customer_service.create_ticket("John", "iPhone not working")
+customer_service.create_ticket("Mary", "Broken monitor")
+customer_service.create_ticket("Peter", "No internet")
+print(customer_service)
+customer_service.process_ticet()
+customer_service.process_ticet()
+customer_service.process_ticet()
+customer_service.process_ticet()
+print(customer_service)
 ```
 
 Output
 
 ```
-
+[{John: iPhone not working}, {Mary: Broken monitor}, {Peter: No internet}, ]
+John: iPhone not working
+Mary: Broken monitor
+Peter: No internet
+There are no tickets to process
+[]
 ```
 
 ## Practice
+
+Using the starting code, implement the request_call and process_call functions so that the calls are processed in first in first out order, except 911 should go first (can be accomplished by being processed first or adding it to the front of the queue, however you decide to implement it).
 
 [Queue Practice](1-2-practice.py)
 

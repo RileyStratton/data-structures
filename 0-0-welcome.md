@@ -70,6 +70,6 @@ From most efficient to least efficient, the operations are as follows:
 * O(n^2): Quadratic
 * O(2^n): Exponential
 
-Here is a graph with all except single for easy comparison. 
+Here is a graph with all except O(1) for easy comparison. 
 
 ![O](O.png)
